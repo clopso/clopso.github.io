@@ -1,94 +1,78 @@
-<html>
-  <head>
-    <title>Doom Fire Effect</title>
-    <style>
-      body {
-        background-color: #63431c;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/scripts.js"></script>
+    <title>Github CLOPSO</title>
+</head>
+<body>
+    <div class="container">
+        <section class="one" id="one">
+            <div class="header">
+                <span class="name">Caio Lemes</span>
+                <span class="job">Desenvolvedor do futuro</span>
+            </div>
+            
+            <div class="about">
+                <h1>Sobre mim:</h1>
+                <p>Nasci 2005 em Londrina-PR, fui criado e moro em Rolândia-PR.</p><br>
+                <p>Estudo programação desde 2016, comecei na linguagem C# e com o projeto "PadoLABS" comecei a estudar C.</p><br>
+                <p>Nas horas vagas gosto de jogar, tweetar e ouvir musica!</p><br>
+            </div>
+        </section>
+        <section class="two" id="two">
+            <h1 align="center" style="padding-top:60px;font-size:72px;">Nivel de habilidade:</h1>
+                <div class="barchart-Wrapper">
+                    <div class="barchart-TimeCol">
+                      <div class="barchart-Time">
+                        <span class="barchart-TimeText">Especialista</span>
+                      </div>
+                      <div class="barchart-Time">
+                        <span class="barchart-TimeText">Avançado</span>
+                      </div>
+                      <div class="barchart-Time">
+                        <span class="barchart-TimeText">Médio</span>
+                      </div>
+                      <div class="barchart-Time">
+                        <span class="barchart-TimeText">Basico</span>
+                      </div>
+                    </div>
+                  
+                    <div class="barChart-Container">
+                      <div class="barchart">
+                        <div class="barchart-Col">
+                          <div class="barchart-Bar c-bar"></div>
+                          <div class="barchart-BarFooter">
+                            <h3>C</h3>
+                          </div>
+                        </div>
+                        <div class="barchart-Col">
+                          <div class="barchart-Bar cs-bar"></div>
+                          <div class="barchart-BarFooter">
+                            <h3>C#</h3>
+                          </div>
+                        </div>
+                        <div class="barchart-Col">
+                          <div class="barchart-Bar python-bar"></div>
+                          <div class="barchart-BarFooter">
+                            <h3>Python</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        </section>
 
-      h1 {
-        font-family: impact;
-        margin: 0;
-        font-size: 35px;
-        text-shadow: 0px -1px 0px rgba(255,225,31,0.4);
-      }
+        <section class="three" id="three">
+            <h1>3</h1>
+        </section>
 
-      #fireCanvas {
-        margin: 10px;
-      }
-
-      table {
-        border-collapse: collapse;
-        border: 1px solid #000;
-      }
-
-      td {
-        width: 32px;
-        height: 32px;
-        color: #FFF;
-        border: 1px solid #000;
-        text-align: center;
-        vertical-align: center;
-        font-family: arial;
-        font-size: 10px;
-        position: relative;
-        font-weight: bold;
-      }
-
-      td.pixel {
-        width: 4px;
-        height: 4px;
-        border: 0;
-      }
-
-      .pixel-index {
-        font-size: 7px;
-        display: inline-block;
-        position: absolute;
-        top: 1px;
-        right: 1px;
-        color: #927450;
-      }
-
-      a {
-        color: #FFF;
-        font-size: 10px;
-        font-family: arial;
-      }
-
-      .margin {
-        margin: 5px;
-      }
-    </style>
-  </head>
-  <body>
-
-    <center>
-      <h1>Doom Fire Effect</h1>
-      <div id="fireCanvas"></div>
-      <div class="margin">
-        <button onclick="decreaseFireSource()">-</button>
-        <button onclick="destroyFireSource()">Min Fire</button>
-        <button onclick="createFireSource()">Max Fire</button>
-        <button onclick="increaseFireSource()">+</button>
-      </div>
-      <div class="margin">
-        <button onclick="toggleDebugMode()">Toggle Debug Mode</button>
-      </div>
-      <div class="margin">
-        <span>Change de wind!</span>
-      </div>
-      <div class="margin">
-        <button onclick="changeWindDirection(0)"> < </button>
-        <button onclick="changeWindDirection(1)"> No wind </button>
-        <button onclick="changeWindDirection(2)"> > </button></div>
-    </center>
-
-    <script src="fire.js"></script>
-
-  </body>
+        <section class="four" id="four">
+            <h1>4</h1>
+        </section>
+    </div>
+</body>
 </html>
-

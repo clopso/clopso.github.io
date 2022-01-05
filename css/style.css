@@ -1,188 +1,80 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 body{
-    position:relative
+    background-image: linear-gradient(to bottom, #515861,#676F7A);
+    justify-content: center;
+    min-height: 100vh;
 }
-section{
-    height: 100vh;
-    scroll-snap-align: start;
-}
-
 .header{
-    overflow: hidden;
-    padding: 10px;
-    background: #14191F;
-    color: white;
-    vertical-align: top;
+    background:#676F7A;
+    width:100%;
+    height:15vh;
+    padding:10px;
+    padding-top: 5px;
 }
 .header .name{
-    margin: 0 0 6px 3%;
-    font-size: 30px;
-}
-.header .job{
-    margin: 6px 3% 0 0;
-    float: right;
-    font-size: 24px;
-    font-style: oblique;
-}
-
-.about{
-    padding-top: 20px;
-    padding-right: 50px;
-    background: #2B323B;
-    width:50%;
-    height:100%;
-}
-.about h1{
-    padding: 20px;
-    color: white;
-    text-align: center;
+    float: left;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    margin: 20px 0 0 5%;
     font-size: 36px;
+    color: #14171b;
 }
-.about p{
-    color: rgb(214, 214, 214);
-    font-size: 24px;
-    padding-left: 50px;
-
-}
-.container{
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-
-}
-
-.one{
+.header .contact{
+    font-family: 'Trebuchet MS', sans-serif;
     background: #22272E;
-}
-.two{
-    background: #474D54;
-}
-.three{
-    background: #70767E;
-}
-.four{
-    background: #9CA1AA;
-}
-
-
-
-
-.barchart-Wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    display: table;
-    position: relative;
-    height: 250px;
-    width: 50%;
-    top: 10%;
-}
-  
-.barChart-Container {
-    display: table-cell;
-    width: 100%;
-    height: 100%;
-    padding-left: 50px;
-}
-  
-.barchart{
-    display: table;
-    table-layout: fixed;
-    height: 100%;
-    width: 100%;
-    border-bottom: 3px solid #B33D20;
-}
-  
-.barchart-Col {
-    position: relative;
-    vertical-align: bottom;
-    display: table-cell;
-    height: 100%;
-}
-  
-.barchart-Col+.barchart-Col {
-    border-left: 1px solid transparent;
-}
-  
-.barchart-Bar {
-    position: relative;
-    height: 0;
-    transition: height 0.5s 2s;
-    width: 60px;
-    margin: auto;
-}
-  
-.barchart-Bar:after {
-    content: attr(attr-height);
+    border: 2px solid #22272E;
+    box-shadow: 0px 0px 20px 0px #22272E;
+    padding: 5px 13px 5px 15px;
+    float: right;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 20px 2% 0 0;
+    font-size: 24px;
     color: white;
-    position: absolute;
-    text-align: center;
-    width: 100%;
 }
-  
-  .barchart-BarFooter {
-    position: absolute;
-    text-align: center;
-    height: 10%;
-    width: 100%;
-  }
-  
-.barchart-BarFooter h3 {
-    margin: 15px 0 0 0;
-    color: #661400;
+.content{
+    width:100%;
+    height:85vh;
 }
-  
-.barchart-TimeCol {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-}
-  
-.barchart-Time {
-    height: 20%;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-}
-  
-  .barchart-Time:after {
-    border-bottom: 2px solid black;
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 100%;
-  }
-  
-  .barchart-TimeText {
-    position: absolute;
-    top: 85%;
-    z-index: 20;
-    background: #157353;
-    padding: 2px 15px 2px 15px;
-    color: white;
-    font-size: 15px;
-    text-align: right;
-    font-family: 'Avenir Medium';
-  }
+.content .main{
+    float: left;
+    width:45%;
+    padding-top: 10%;
+    margin-left: 5%;
 
-  .c-bar {
-    background-color: #20B383;
-    height: 70%;
-  }
-  
-  .cs-bar {
-    background-color: #20B383;
-    height: 60%;
-  }
-  
-  .python-bar {
-    background-color: #20B383;
-    height: 40%;
-  }
+    font-family: Tahoma, sans-serif;
+    font-size: 48px;
+}
+.content .second{
+    float: right;
+    width: 45%;
+
+    overflow: hidden;
+    font-family: Tahoma, sans-serif;
+    font-size: 24px;
+    padding-top: 8.7%;
+    margin-right: 5%;
+}
+
+.falecmg {
+    width:100%;
+    height:80vh;
+}
+.footer {
+    width:100%;
+    height:20vh;
+}
+.footer a{
+    padding-top: 30px;
+    padding-right: 3%;
+    color: #22272E;
+    float: right;
+    filter:drop-shadow(0px 0px 5px #22272E)
+}

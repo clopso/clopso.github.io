@@ -2,8 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x: visible;
-    overflow-y: visible;
+    overflow-x: hidden;
+    overflow-y: hidden;
     scroll-behavior: smooth;
 }
 body{

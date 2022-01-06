@@ -7,12 +7,12 @@
     scroll-behavior: smooth;
 }
 body{
-    background-image: linear-gradient(to bottom, #515861,#676F7A);
+    background-image: linear-gradient(to bottom, #676F7A,#22272E);
     justify-content: center;
     min-height: 100vh;
 }
 .header{
-    background:#676F7A;
+    background:transparent;
     width:100%;
     height:10%;
     padding:10px;
@@ -42,25 +42,30 @@ body{
 .content{
     width:100%;
     height:85vh;
+    display: inline-block;
 }
 .content .main{
-    float: left;
     width:45%;
-    padding-top: 10%;
+    float: left;
     margin-left: 5%;
-
-    font-family: Tahoma, sans-serif;
-    font-size: 350%;
+    padding-top: 10%;
+    
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 575%;
 }
 .content .second{
-    float: right;
     width: 45%;
+    float: right;
+    margin-right: 5%;
+    padding-top: 10%;
 
     overflow: hidden;
+    text-align: right;
+
     font-family: Tahoma, sans-serif;
-    font-size: 24px;
-    padding-top: 8.7%;
-    margin-right: 5%;
+    font-size: 150%;
 }
 
 .falecmg {
@@ -74,7 +79,36 @@ body{
 .footer a{
     padding-top: 30px;
     padding-right: 3%;
-    color: #22272E;
+    color: #676F7A;
     float: right;
-    filter:drop-shadow(0px 0px 5px #22272E)
+    filter:drop-shadow(0px 0px 5px #676F7A)
+}
+
+@media screen and (max-width: 700px) {
+    .header .name{
+        font-size: 200%;
+        margin-left: 0;
+        padding-top: 0;
+    }
+    .header .contact{
+        font-size: 100%;
+    }
+
+    .content .main{
+        float: none;
+        width: 100%;
+
+        text-align: center;
+        margin-left: 0;
+        padding-top:10%;
+        font-size: 200%;
+    }
+    .content .second{
+        width: 100%;
+        font-size: 100%;
+        text-align: center;
+
+        margin-right: 0;
+        padding-top:10%;
+    }
 }

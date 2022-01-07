@@ -11,22 +11,23 @@ body{
     justify-content: center;
     min-height: 100vh;
 }
-.header{
-    background:transparent;
+
+
+#header{
     width:100%;
     height:10%;
     padding:10px;
     padding-top: 5px;
 }
-.header .name{
-    float: left;
+#header .name{
     font-family: 'Courier New', monospace;
-    font-weight: 600;
     margin: 20px 0 0 5%;
-    font-size: 300%;
     color: #14171b;
+    font-weight: 600;
+    font-size: 3em;
+    float: left;
 }
-.header .contact{
+#header .contact{
     font-family: 'Trebuchet MS', sans-serif;
     background: #22272E;
     border: 2px solid #22272E;
@@ -36,9 +37,11 @@ body{
     border-radius: 30px;
     text-decoration: none;
     margin: 20px 2% 0 0;
-    font-size: 160%;
+    font-size: 2em;
     color: white;
 }
+
+
 .content{
     width:100%;
     height:100vh;
@@ -54,7 +57,7 @@ body{
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 575%;
+    font-size: 5em;
 }
 .content .second{
     width: 45%;
@@ -66,58 +69,92 @@ body{
     text-align: right;
 
     font-family: Tahoma, sans-serif;
-    font-size: 150%;
+    font-size: 1.5em;
 }
 
-.falecmg {
-    align-items: center;
-    height:80vh;
+
+#falecmg {
+    justify-content: center;
+    align-content: center;
+    display: inline-grid;
+    grid-gap: 10px;
+
     width:100%;
+    height:85vh;
+
+    text-align: center;
 }
-.falecmg .twitter{
-    background-color: black;
-    margin: 2% 1% 0% 24%;
-    float: left;
-
-    height: 25%;
-    width: 25%;}
-.falecmg .discord{
-    background-color: black;
-    margin: 2% 24% 0% 1%;
-    float: right;
-
-    height: 25%;
-    width: 25%;
+#falecmg *{
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+    font-size: 1.5em;
+    height: 175px;
+    width: 400px;
 }
-.falecmg .github{
-    background-color: black;
-    margin: 2% 1% 1% 24%;
-    float: left;
-
-    height: 25%;
-    width: 25%;
-
+#falecmg * h2{
+    position: relative;
+    margin-top: 16%;
 }
-.falecmg .email{
-    background-color: black;
-    margin: 1% 24% 1% 1%;
-    float: right;
-
-    height: 25%;
-    width: 25%;
+#falecmg .twitter{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    
+    background: rgb(21,118,179);
+    background: linear-gradient(135deg, rgba(21,118,179,1) 0%, rgba(29,161,242,1) 30%, rgba(31,169,255,1) 100%);
 }
+#falecmg .twitter:hover {
+    box-shadow: inset 0 0 2px 2px #eee;
+}
+#falecmg .discord{
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+    background: #dc2743;
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%)
+}
+#falecmg .discord:hover {
+    box-shadow: inset 0 0 2px 2px #eee;
+}
+#falecmg .github{
+    grid-column-start: 1;
+    grid-row-start: 2;
+
+    background: rgb(29,122,51);
+    background: linear-gradient(90deg, rgba(29,122,51,1) 0%, rgba(45,187,79,1) 30%, rgba(48,199,83,1) 100%); 
+}
+#falecmg .github:hover {
+    box-shadow: inset 0 0 2px 2px #eee;
+}
+#falecmg .email{
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    background: rgb(212,23,17);
+    background: linear-gradient(135deg, rgba(212,52,47,1) 0%, rgba(199,22,16,1) 70%, rgba(135,15,11,1) 100%); 
+}
+#falecmg .email:hover {
+    box-shadow: inset 0 0 2px 2px #eee;
+}
+
 
 .footer {
+    height:15vh;
     width:100%;
-    height:20vh;
 }
 .footer a{
+    filter:drop-shadow(0px 0px 5px #676F7A);
     padding-top: 30px;
     padding-right: 3%;
     color: #676F7A;
     float: right;
-    filter:drop-shadow(0px 0px 5px #676F7A)
 }
+
 
 @media screen and (max-width: 1200px) {
     .content .main{
@@ -139,12 +176,12 @@ body{
     }
 }
 @media screen and (max-width: 800px) {
-    .header .name{
+    #header .name{
         font-size: 200%;
         margin-left: 0;
         padding-top: 0;
     }
-    .header .contact{
+    #header .contact{
         font-size: 100%;
     }
 
@@ -164,5 +201,26 @@ body{
 
         margin-right: 0;
         padding-top:10%;
+    }
+
+    #falecmg *{
+        height: 150px;
+        width: 340px;
+    }
+    #falecmg .twitter{
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+    #falecmg .discord{
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+    #falecmg .github{
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+    #falecmg .email{
+        grid-row-start: 4;
+        grid-column-start: 1;
     }
 }

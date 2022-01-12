@@ -1,3 +1,10 @@
+/* Color Theme Swatches in Hex */
+.yellows3-1-hex { color: #434142; }
+.yellows3-2-hex { color: #FFCB05; }
+.yellows3-3-hex { color: #FDD540; }
+.yellows3-4-hex { color: #F2D264; }
+.yellows3-5-hex { color: #C1C1C1; }
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +14,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background-image: linear-gradient(to bottom, #676F7A,#22272E);
+    background: linear-gradient(0deg,#F2D264 0%,#FDD540 100%); 
     justify-content: center;
     min-height: 100vh;
 }
@@ -29,10 +36,10 @@ body{
 }
 #header .contact{
     font-family: 'Trebuchet MS', sans-serif;
-    box-shadow: 0px 0px 20px 0px #22272E;
-    border: 2px solid #22272E;
+    box-shadow: 0px 0px 20px 0px #434142;
+    border: 2px solid #434142;
     padding: 5px 13px 5px 15px;
-    background: #22272E;
+    background: #434142;
     text-decoration: none;
     border-radius: 30px;
     margin: 20px 2% 0 0;
@@ -55,9 +62,10 @@ body{
     padding-top: 12.5%;
     
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 800;
     font-style: normal;
+    font-weight: 800;
     font-size: 5rem;
+    color:black;
 }
 .content .second{
     width: 45%;
@@ -70,6 +78,7 @@ body{
 
     font-family: Tahoma, sans-serif;
     font-size: 1.5rem;
+    color:#333;
 }
 
 
@@ -89,6 +98,7 @@ body{
     font-size: 3rem;
     height: 175px;
     width: 400px;
+    
 }
 #falecmg * h2{
     height: min-content;
@@ -114,7 +124,7 @@ body{
     margin-top: 13%;
 }
 #falecmg a:hover {
-    box-shadow: inset 0 0 2px 2px #eee;
+    box-shadow: inset 0 0 2px 2px #C1C1C1;
 }
 #falecmg .twitter{
     grid-column-start: 1;
@@ -140,8 +150,8 @@ body{
     grid-column-start: 1;
     grid-row-start: 2;
 
-    background: rgb(29,122,51);
-    background: linear-gradient(90deg, rgba(29,122,51,1) 0%, rgba(45,187,79,1) 30%, rgba(48,199,83,1) 100%); 
+    background: #F5F5F5;
+    background: linear-gradient(60deg, rgba(29,122,51,1) 0%, rgba(45,187,79,1) 30%, rgba(48,199,83,1) 100%); 
 }
 #falecmg .email{
     grid-column-start: 2;
@@ -152,8 +162,8 @@ body{
 }
 
 .footer {
-    filter:drop-shadow(0px 0px 5px #676F7A);
-    color: #676F7A;
+    filter:drop-shadow(0px 0px 5px #434142);
+    color: #434142;
     float:right;
     padding:0 3% 3% 0;
 }

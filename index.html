@@ -10,32 +10,7 @@
     />
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="https://kit.fontawesome.com/b3f377d81a.js" crossorigin="anonymous"></script>
-
-    <script>
-        document.addEventListener('keydown', function(e) {
-            switch (e.keyCode) {
-                case 38:
-                    jump("header");
-                    break;
-                case 33:
-                    jump("header");
-                    break;
-
-                case 34:
-                    jump("talk");
-                    break;
-                case 40:
-                    jump("talk");
-                    break;
-            }
-        });
-
-        function jump(h){
-            var url = location.href;               //Save down the URL without hash.
-            location.href = "#"+h;                 //Go to the target element.
-            history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
-        }
-    </script>
+    <script src="./js/index.js"></script>
 
     <title>clopso github</title>
 </head>

@@ -36,9 +36,15 @@ body{
     margin: 5vh 6vw;
     color: white;
 
-    box-shadow: 0 0 1vh 0 #333;
+    animation-name: shadow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: background-color 0.2s ease;
 }
 
+#header .talk:hover{
+    background: #4a4a4a;
+}
 
 .content{
     width:100vw;
@@ -97,7 +103,7 @@ body{
     color: white;
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     margin: 10% 0;
 }
 
@@ -120,13 +126,32 @@ body{
     text-align: center;
     padding: 2.5vh 0;
     box-shadow: 0 0 5px 0 #333;
+    transition: background-color 0.2s ease;
+}
+
+#cardButtons a:hover{
+    background-color: #4a4a4a;
 }
 
 .footer {
-    filter:drop-shadow(0px 0px 5px #333);
     color: #333;
     float:right;
     margin:0 6vw 5vh 0;
+
+    animation-name: shadow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: color 0.2s ease;
+}
+
+.footer:hover{
+    color: #444;
+}
+
+@keyframes shadow {
+    0% { filter:drop-shadow(0px 0px 2px #333); }
+    50% { filter:drop-shadow(0px 0px 6px #333); }
+    100% { filter:drop-shadow(0px 0px 2px #333); }
 }
 
 @media screen and (max-width: 1024px) {
@@ -198,6 +223,7 @@ body{
 
     #cards h1{
         margin: 5% 0;
+        font-size: 1.75rem;
     }
 
     #cardButtons a{

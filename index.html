@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta
       name="keywords"
-      content="sites, web, bio, links, redes sociais, desenvolvimento, programador, clopso, front-end, back-end,designer, ui, iuri, freelancer, freela, website"
+      content="sites, web, bio, links, redes sociais, desenvolvimento, programador, clopso, front-end, back-end,designer, ui, iuri, freelancer,website"
     />
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="https://kit.fontawesome.com/b3f377d81a.js" crossorigin="anonymous"></script>
@@ -17,12 +17,12 @@
 <body>
     <header id="header">
         <span class="name">Caio Lemes</span>
-        <a class="talk" href="#talk">Fale comigo!</a>
+        <a class="talk" id="talkButton" href="#talk">Fale comigo!</a>
     </header>
 
     <content class="content">
-        <h1 class="main">Trabalhe<br>inteligente!</h1>
-        <p class="second">
+        <h1 class="main" id="main">Trabalhe<br>inteligente!</h1>
+        <p class="second" id="second">
             Nascido em Londrina-PR no ano 2005.
                 <br>
             Atualmente morando em <b>Rolândia-PR</b>.
@@ -41,7 +41,7 @@
 
     <section id="talk">
         <div id="cards">
-            <h1>Contatos</h1>
+            <h1 id="contacts">Contatos</h1>
             <div id="cardButtons">
                 <a href="https://github.com/clopso">GitHub</a>
                 <a href="https://www.linkedin.com/in/caio-lemes-8aa46825b/">LinkedIn</a>
@@ -50,15 +50,16 @@
             </div>
         </div>
         <div id="cards">
-            <h1>Projetos</h1>
+            <h1 id="projects">Projetos</h1>
             <div id="cardButtons">
                 <a href="https://github.com/clopso/tweetext">Tweetext</a>
+                <a href="https://github.com/clopso/esp32-rfm69-ook-cloner">ESP32 RFM69 OOK Cloner</a>
                 <a href="https://github.com/clopso/commit-message-assistant">Commit Message Assistant</a>
-                <a href="https://github.com/clopso/shower-ideas">Shower Ideas</a>
                 <a href="https://github.com/clopso/leetcode-roadmap">LeetCode Roadmap</a>
             </div>
         </div>
     </section>
     <a href="#header" class="footer"><i class="fas fa-arrow-circle-up fa-4x"></i></a>
 </body>
+<script src="./js/language.js"></script>
 </html>

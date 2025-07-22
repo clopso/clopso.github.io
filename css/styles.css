@@ -1,3 +1,16 @@
+:root {
+    --primary: #FDD540;
+    --primary-dark: #F2D264;
+    --secondary: #333333;
+    --text-dark: #222222;
+    --text-light: #555555;
+    --white: #FFFFFF;
+    --black: #000000;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,9 +19,13 @@
     overflow-y: hidden;
     scroll-behavior: smooth;
 }
-body{
-    background: linear-gradient(0deg,#F2D264 0%,#FDD540 100%); 
-    min-height: 100vh;
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
 #header{
@@ -18,32 +35,38 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-#header .name{
+
+.name{
     font-family: 'Helvetica Neue', sans-serif;
-    font-size:2.5vw;
-    font-weight: 600;
-    margin: 5vh 6vw;
-    color: black;
+    font-size:2.2vw;
+    font-weight: 700;
+    margin-left: 3vw;
+    color: var(--text-dark);
 }
-#header .talk{
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size:2vw;;
+
+.talk{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 0.5vw 1vw;
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 2rem;
     text-decoration: none;
 
-    padding: 0.5vw 1vw;
-    background: #333;
-    border-radius: 5vh;
-    margin: 5vh 6vw;
-    color: white;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+
+    font-size: 1.5rem;
+    margin: 3vh 3vw;
 
     animation-name: shadow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    transition: background-color 0.2s ease;
 }
 
-#header .talk:hover{
+.talk:hover{
     background: #4a4a4a;
+    transform: translateY(-2px);
 }
 
 .content{
@@ -52,29 +75,27 @@ body{
     display: inline-block;
     scroll-snap-type: y mandatory;
 
-    margin-top: 15vh;
+    margin-top: 20vh;
 }
-.content .main{
-    float: left;
-    margin-left: 6vw;
-    
-    font-family: 'Helvetica Neue', sans-serif;
-    font-style: normal;
+.main{
+    font-size: clamp(2rem, 8vw, 6rem);
     font-weight: 800;
-    font-size: 5.5vw;
-    color:black;
+    float: left;
+    margin-left: 3vw;
 }
-.content .second{
+.second{
     float: right;
-    margin-right: 6vw;
+    margin-right: 3vw;
+
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
 
     text-align: right;
-
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1.6vw;
-    color:#333;
 }
 
+.second b {
+    color: var(--secondary);
+    font-weight: 600;
+}
 
 #talk {
     width:100vw;
@@ -90,51 +111,109 @@ body{
     margin: 0 15vw;
 }
 
-#cards {
-    background-color: black;
-    border-radius: 5vh;
-    width:25vw;
-    height:70vh;
-
-    box-shadow: 0 0 10px 0 #333;
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#cards h1{
-    color: white;
-    font-family: 'Trebuchet MS', sans-serif;
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     text-align: center;
-    font-size: 2.5rem;
-    margin: 10% 0;
+    margin-bottom: 3rem;
 }
 
-#cardButtons{
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
-    height: 70%;
+    height: 100%;
+
 }
 
-#cardButtons a{
-    background-color: #333;
-    border-radius: 5vh;
-    width: 75%;
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-image-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.project-description {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: auto;
+    padding: 0 1.5rem 1.5rem;
+}
+
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--secondary);
+    color: var(--white);
+    border-radius: 6px;
     text-decoration: none;
-    color: white;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
     text-align: center;
-    padding: 2.5vh 0;
-    box-shadow: 0 0 5px 0 #333;
-    transition: background-color 0.2s ease;
 }
-
-#cardButtons a:hover{
-    background-color: #4a4a4a;
+.project-link:hover {
+    background: #444444;
+    box-shadow: var(--shadow-hover);
 }
 
 .footer {
-    color: #333;
+    color: var(--secondary);
     float:right;
     margin:0 6vw 5vh 0;
 
@@ -147,6 +226,19 @@ body{
 .footer:hover{
     color: #444;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.projects-grid > * {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.projects-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.projects-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.projects-grid > *:nth-child(3) { animation-delay: 0.3s; }
 
 @keyframes shadow {
     0% { filter:drop-shadow(0px 0px 2px #333); }

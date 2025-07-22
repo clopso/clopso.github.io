@@ -15,10 +15,7 @@ const secondText = `
     <br><br>
     `
 
-const talkText = `Talk to me!`
-
-const contactText = `Contacts`
-const projectsText = `Projects`
+const talkText = `My Projects`
 
 function detectLanguage(){
     const language = navigator.language || navigator.userLanguage;
@@ -34,11 +31,8 @@ function detectLanguage(){
         const talkParagraph = document.getElementById("talkButton");
         talkParagraph.innerHTML = talkText
 
-        const contactParagraph = document.getElementById("contacts");
-        contactParagraph.innerHTML = contactText
-
-        const projectsParagraph = document.getElementById("projects");
-        projectsParagraph.innerHTML = projectsText
+        const sectionTitle = document.getElementById("section-title");
+        sectionTitle.innerHTML = talkText
     }
 }
 

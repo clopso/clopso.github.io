@@ -1,19 +1,26 @@
 const firstText = `Always<br>work smart!`
 
 const secondText = `
-    I was born in Londrina-PR in 2005.
+    Born in 2005, Londrina-PR.
     <br>
-    I currently live in <b>Rolândia-PR</b>.
+    Living in <b>Rolândia-PR</b>.
     <br><br>
-    Embedded Systems Developer.
+    Fullstack Developer.
     <br>
-    Currently studying <b>C</b>, <b>JS</b>, and <b>Python</b>.
-    <br><br>
-    Studying <b>Software Engineering</b>.
+    <b>Node.js</b>, <b>NestJS</b>, <b>React</b>.
     <br>
-    Working as a developer at PADO.
+    <b>Python</b>, <b>Express</b>, <b>MongoDB</b>.
+    <br>
+    <b>Redis</b>, <b>Docker</b>, <b>Linux</b>.
+    <br>
+    <b>GCP</b>, <b>Cloud Run</b>, <b>K8s</b>.
     <br><br>
-    `
+    Software Engineering — UNOPAR.
+    <br>
+    Developer at <b>PADO</b>.
+    <br><br>
+`
+
 
 const talkText = `My Projects`
 

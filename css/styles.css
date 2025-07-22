@@ -75,13 +75,14 @@ body {
     display: inline-block;
     scroll-snap-type: y mandatory;
 
-    margin-top: 20vh;
+    margin-top: 12vh;
 }
 .main{
     font-size: clamp(2rem, 8vw, 6rem);
     font-weight: 800;
     float: left;
     margin-left: 3vw;
+    margin-top: 8vh;
 }
 .second{
     float: right;
@@ -129,7 +130,7 @@ body {
 }
 
 .project-card {
-    background: var(--white);
+    background: var(--secondary);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -172,11 +173,11 @@ body {
 .project-title {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: var(--black);
+    color: var(--white);
 }
 
 .project-description {
-    color: var(--text-dark);
+    color: var(--white);
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
 }
@@ -198,7 +199,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     padding: 0.6rem 1.2rem;
-    background: var(--secondary);
+    background: var(--black);
     color: var(--white);
     border-radius: 6px;
     text-decoration: none;
@@ -208,7 +209,7 @@ body {
     text-align: center;
 }
 .project-link:hover {
-    background: #444444;
+    background: var(--text-light);
     box-shadow: var(--shadow-hover);
 }
 
